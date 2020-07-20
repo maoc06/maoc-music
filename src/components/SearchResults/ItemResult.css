@@ -1,0 +1,25 @@
+.item-result {
+    display: flex;
+    min-height: 40px;
+    max-height: 40px;
+    transition: all 0.2s ease-out;
+    overflow: hidden;
+    margin: 2px 0;
+}
+
+.item-result:hover {
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.item-result img {
+    height: 100%;
+    width: auto;
+}
+
+.item-result p {
+    width: 100%;
+    margin: auto;
+    padding: 0 10px;
+    color: white;
+}

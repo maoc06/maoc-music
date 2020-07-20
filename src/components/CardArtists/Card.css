@@ -1,0 +1,52 @@
+.card {
+    position: relative;
+    min-width: 170px;
+    max-width: 170px;
+    height: 200px;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.2s ease-out;
+    color: white;
+    margin: 15px 20px;
+}
+
+.card:hover {
+    cursor: pointer;
+    transform: translate(5px, -10px);
+}
+
+.pic {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+}
+
+.blur {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: auto;
+    filter: blur(15px);
+}
+
+.card span {
+    white-space: nowrap;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    min-height: 32px;
+    text-align: center;
+    z-index: 1;
+    color: white;
+}
+
+@media (max-width: 390px) {
+    .card {
+        height: 165px;
+        min-width: 132px;
+    }
+}

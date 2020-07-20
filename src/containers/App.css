@@ -1,0 +1,363 @@
+/* Global Styles */
+
+.App {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: 90px 1fr;
+    grid-template-areas: "sidebar search-bar" "sidebar main";
+    min-height: 100vh;
+    color: white;
+    background: var(--background-color);
+}
+
+.container-right {
+    grid-area: main;
+    overflow-y: scroll;
+    padding: 0 var(--main-padding-sides);
+}
+
+@media (max-width: 700px) {
+    h1 {
+        font-size: 1.2rem;
+    }
+    .App {
+        grid-template-columns: 1fr;
+        grid-template-rows: 90px 1fr 50px;
+        grid-template-areas: "search-bar" "main" "sidebar";
+    }
+    .container-right {
+        padding: 0 var(--main-padding-sides-mobile);
+    }
+}
+
+
+/* End Global Styles */
+
+
+/* Start Search Bar */
+
+.search-container {
+    grid-area: search-bar;
+    display: flex;
+    align-items: center;
+    color: white;
+    padding: 0 var(--main-padding-sides);
+}
+
+input {
+    padding: 0;
+    height: 40px;
+    width: 325px;
+    max-width: 325px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    background: var(--background-secondary-color);
+    color: white;
+    font-family: "Poppins", sans-serif;
+    border: 0;
+}
+
+.icon-search {
+    height: 40px;
+    padding: 0 10px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    background: var(--background-secondary-color);
+    border: 0;
+}
+
+.icon-search:hover {
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+@media (max-width: 700px) {
+    .search-container {
+        padding: 0 var(--main-padding-sides-mobile);
+    }
+    input {
+        width: 100%;
+    }
+}
+
+
+/* End Search Bar */
+
+
+/* Start Carousel */
+
+.header-carrousel {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-carrousel h1 {
+    margin: 0;
+}
+
+.arrow {
+    margin: 0 10px;
+    font-size: 1.5rem;
+    color: var(--yellow);
+    transition: all 0.2s ease-out;
+    z-index: 999;
+}
+
+.arrow:hover {
+    cursor: pointer;
+    color: var(--yellow-accent);
+}
+
+@media (max-width: 700px) {
+    .arrow {
+        font-size: 1rem;
+    }
+}
+
+
+/* End Carousel */
+
+
+/* Start Divide Screen Home */
+
+.home-divide {
+    display: flex;
+    width: 100%;
+    height: fit-content;
+}
+
+.home-divide .popular-left,
+.popular-right {
+    flex: 0.5;
+    height: 100%;
+}
+
+@media (max-width: 900px) {
+    .home-divide {
+        flex-direction: column;
+    }
+}
+
+
+/* End Divide Screen Home */
+
+.container-right {
+    overflow: hidden;
+}
+
+.container-right section {
+    display: flex;
+}
+
+.container-right section .slider {
+    width: 100%;
+    display: flex;
+    overflow-x: hidden;
+    transition: transform 0.2s ease-out;
+}
+
+.container-right section .slider .items-slider {
+    width: fit-content;
+    display: flex;
+    transition: transform 0.2s ease-out;
+}
+
+
+/* Start Cards Tracks */
+
+.top-songs-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-top: 20px;
+    overflow: visible;
+}
+
+
+/* End Cards Tracks */
+
+
+/* Start Chart Artists */
+
+.featured-artists {
+    display: grid;
+    gap: 12px;
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+}
+
+@media (max-width: 390px) {
+    .featured-artists {
+        grid-template-columns: repeat(auto-fit, minmax(132px, 1fr));
+    }
+}
+
+
+/* End Chart Artists */
+
+
+/* Starts Discover Page */
+
+.genres-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 32px;
+}
+
+
+/* End Discover Page */
+
+
+/* Start Header Section Single Album */
+
+header {
+    display: flex;
+    margin-bottom: 50px;
+    max-height: 180px;
+}
+
+header img {
+    width: 170px;
+    height: auto;
+    border-radius: 8px;
+}
+
+header .info {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 20px;
+}
+
+header .info h1 {
+    margin: 0;
+}
+
+header .info .tags-genres {
+    display: flex;
+    font-weight: 600;
+    font-size: 0.8rem;
+}
+
+header .info .tags-genres p {
+    padding: 5px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    background: var(--background-secondary-color);
+    cursor: pointer;
+    margin-right: 10px;
+    transition: all 0.2s ease-out;
+}
+
+header .info .tags-genres p:hover {
+    transform: translate(3px, -5px);
+}
+
+header .info .details {
+    display: flex;
+}
+
+header .info p {
+    margin: 2px;
+    font-size: 0.9rem;
+}
+
+#dot {
+    margin: auto 8px;
+}
+
+
+/* End Header Section Single Album */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td {
+    position: relative;
+    height: 40px;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+td p {
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+th {
+    font-size: 1.2rem;
+    background: linear-gradient(to bottom, #fd2d55, transparent);
+    border: 0;
+    text-align: left;
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+}
+
+
+/* Start Error Page - 404 Not Found */
+
+.error-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    /* border: 1px solid red; */
+}
+
+.error-container .Error-Title {
+    font-size: 5rem;
+    font-weight: 700;
+    color: var(--yellow);
+}
+
+.error-container button {
+    padding: 0 32px;
+    height: 40px;
+    border-radius: 8px;
+    border: 0;
+    margin-top: 32px;
+    background: var(--yellow);
+    font-weight: 700;
+    transition: all 0.2s ease-out;
+}
+
+.error-container button:hover {
+    cursor: pointer;
+    background: var(--background-color);
+    border: 1px solid var(--yellow);
+    color: var(--yellow);
+}
+
+
+/* End Error Page - 404 Not Found */
+
+
+/* Start Single Artist Page */
+
+.header-artist {
+    display: flex;
+}
+
+.header-artist img {
+    border-radius: 50%;
+}
+
+.header-artist .artist-info {
+    align-self: center;
+    margin-left: 20px;
+}
+
+.header-artist .artist-info h1 {
+    margin: 0;
+}
+
+
+/* End Single Artist Page */

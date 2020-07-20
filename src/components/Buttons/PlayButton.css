@@ -1,0 +1,10 @@
+.icon-controller {
+    position: absolute;
+    right: 60px;
+    transition: all 0.2s ease-out;
+}
+
+.icon-controller:hover {
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.5);
+}

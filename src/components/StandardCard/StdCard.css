@@ -1,0 +1,28 @@
+.card-container {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.2s ease-out;
+}
+
+.card-container:hover {
+    cursor: pointer;
+    transform: translate(5px, -10px);
+}
+
+.card-container img {
+    width: 100%;
+}
+
+.name-genre-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+    font-weight: 500;
+    z-index: 999;
+    color: white;
+}

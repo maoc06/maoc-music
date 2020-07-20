@@ -7,6 +7,7 @@ It consists of a small music web application :musical_note:. Developed with the 
 ## Main Features
 
 **:top: You get the artists and albums highlighted at the time**
+![](gifs/Home_Page_Maoc_Music.gif)
 
 **:mag_right: You can search by artists, albums or songs**
 
@@ -14,6 +15,6 @@ It consists of a small music web application :musical_note:. Developed with the 
 
 **:arrow_forward: You can play a preview**
 
-**you can add songs to favorites:heart: and playlists:minidisc: (:construction: this feature is in production)**
+**You can add songs to favorites:heart: and playlists:minidisc: (:construction: this feature is in production)**
 
 **:eye_speech_bubble: You can follow artists (:construction: this feature is in production)**

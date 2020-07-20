@@ -14,7 +14,7 @@ class TopRadios extends Component {
   }
 
   render() {
-    const { radios, loading, error } = this.props;
+    const { radios, loading } = this.props;
     if (loading) return <Loading />;
     return (
       <React.Fragment>

@@ -14,7 +14,7 @@ class Genres extends Component {
   }
 
   render() {
-    const { genres, loading, error } = this.props;
+    const { genres, loading } = this.props;
     if (loading) return <Loading />;
     return (
       <React.Fragment>

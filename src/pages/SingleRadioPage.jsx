@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import SingleRadio from "../containers/SingleRadio";
-import { render } from "@testing-library/react";
 
 class SingleRadioPage extends Component {
   render() {

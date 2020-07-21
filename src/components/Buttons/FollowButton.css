@@ -27,7 +27,9 @@
     font-size: 2px;
     color: transparent;
     border: 0;
-    outline: 0;
+    outline: none !important;
+    -webkit-focus-ring-color: transparent !important;
+    -webkit-tap-highlight-color: transparent !important;
 }
 
 .Follow-Button.Press {

@@ -8,7 +8,7 @@ import {
 export default function fetchChart() {
     return (dispatch) => {
         dispatch(actionTopArtistsPending());
-        fetch("/chart")
+        fetch("https://api.deezer.com/chart")
             .then((res) => res.json())
             .then((res) => {
                 if (res.error) {

@@ -1,4 +1,4 @@
-button {
+.go-home-button {
     padding: 0 32px;
     height: 40px;
     border-radius: 8px;
@@ -9,7 +9,7 @@ button {
     transition: all 0.2s ease-out;
 }
 
-button:hover {
+.go-home-button:hover {
     cursor: pointer;
     background: var(--background-color);
     border: 1px solid var(--yellow);

@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const GoHomeButton = () => {
   return (
     <Link to="/">
-      <button>GO HOME</button>
+      <button className="go-home-button">GO HOME</button>
     </Link>
   );
 };

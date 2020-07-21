@@ -232,6 +232,8 @@ header .info {
 }
 
 header .info h1 {
+    white-space: nowrap;
+    text-overflow: ellipsis;
     margin: 0;
 }
 
@@ -308,27 +310,6 @@ th {
 }
 
 
-/* Start Error Page - 404 Not Found */
-
-.error-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    /* border: 1px solid red; */
-}
-
-.error-container .Error-Title {
-    font-size: 5rem;
-    font-weight: 700;
-    color: var(--yellow);
-}
-
-
-/* End Error Page - 404 Not Found */
-
-
 /* Start Single Artist Page */
 
 .header-artist {
@@ -350,10 +331,31 @@ th {
 
 @media (max-width: 500px) {
     .header-artist img {
-        width: 180px;
-        max-height: 180px;
+        width: 150px;
+        max-height: 150px;
     }
 }
 
 
 /* End Single Artist Page */
+
+
+/* Start Error Page - 404 Not Found */
+
+.error-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    /* border: 1px solid red; */
+}
+
+.error-container .Error-Title {
+    font-size: 5rem;
+    font-weight: 700;
+    color: var(--yellow);
+}
+
+
+/* End Error Page - 404 Not Found */

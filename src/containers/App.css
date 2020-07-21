@@ -269,6 +269,13 @@ header .info p {
     margin: auto 8px;
 }
 
+@media (max-width: 500px) {
+    header img {
+        width: 120px;
+        height: auto;
+    }
+}
+
 
 /* End Header Section Single Album */
 
@@ -339,6 +346,12 @@ th {
 
 .header-artist .artist-info h1 {
     margin: 0;
+}
+
+@media (max-width: 500px) {
+    .header-artist img {
+        width: 40%;
+    }
 }
 
 

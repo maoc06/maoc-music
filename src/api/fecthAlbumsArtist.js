@@ -9,6 +9,7 @@ export default function fetchAlbumsArtist(id) {
     return (dispatch) => {
         dispatch(actionAlbumsArtistPending());
         fetch(`/api/artist/${id}/albums`)
+            // fetch(`/artist/${id}/albums`)
             .then((res) => res.json())
             .then((res) => {
                 if (res.error) {

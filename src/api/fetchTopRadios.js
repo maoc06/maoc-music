@@ -9,6 +9,7 @@ export default function fetchTopRadios(id) {
     return (dispatch) => {
         dispatch(actionTopRadiosPending());
         fetch(`/api/radio/top`)
+            // fetch(`/radio/top`)
             .then((res) => res.json())
             .then((res) => {
                 if (res.error) {

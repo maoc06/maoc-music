@@ -9,6 +9,7 @@ export default function fetchSingleArtist(id) {
     return (dispatch) => {
         dispatch(actionSingleArtistPending());
         fetch(`/api/artist/${id}`)
+            // fetch(`/artist/${id}`)
             .then((res) => res.json())
             .then((res) => {
                 if (res.error) {

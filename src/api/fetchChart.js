@@ -9,6 +9,7 @@ export default function fetchChart() {
     return (dispatch) => {
         dispatch(actionTopArtistsPending());
         fetch("/api/chart")
+            // fetch("/chart")
             .then((res) => res.json())
             .then((res) => {
                 if (res.error) {

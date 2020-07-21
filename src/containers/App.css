@@ -294,6 +294,7 @@ td {
 }
 
 td p {
+    white-space: nowrap;
     max-width: 200px;
     overflow: hidden;
     text-overflow: ellipsis;

@@ -56,7 +56,9 @@ class SingleAlbum extends Component {
             {album.tracks.data.map((track, index) => (
               <tr key={track.id}>
                 <td>{index + 1}</td>
-                <td>{track.title}</td>
+                <td>
+                  <p>{track.title}</p>
+                </td>
                 <td class="duration-field">
                   {convertDurationTrack(track.duration)}
                 </td>

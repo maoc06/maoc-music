@@ -1,2 +1,2 @@
-/*    /index.html   200
-/api/*  https://api.deezer.com/:splat 200
+/api/* https://api.deezer.com/:splat  200
+/*  /index.html  200

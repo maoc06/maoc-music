@@ -1,3 +1,7 @@
+## Demo
+
+Go to the demo [here](https://maocmusic.netlify.app) :computer:
+
 ## About the project
 
 :student: This is a small project with the intention of learning the basic concepts of web development with react-redux.

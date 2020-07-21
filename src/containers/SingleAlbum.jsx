@@ -48,7 +48,7 @@ class SingleAlbum extends Component {
             <tr>
               <th>#</th>
               <th>Title</th>
-              <th>Duration</th>
+              <th id="duration-header">Duration</th>
               <th></th>
             </tr>
           </thead>
@@ -57,7 +57,9 @@ class SingleAlbum extends Component {
               <tr key={track.id}>
                 <td>{index + 1}</td>
                 <td>{track.title}</td>
-                <td>{convertDurationTrack(track.duration)}</td>
+                <td class="duration-field">
+                  {convertDurationTrack(track.duration)}
+                </td>
                 <td>
                   <PlayButton url={track.preview} />
                   {/* <FontAwesomeIcon icon={faPlay} /> */}

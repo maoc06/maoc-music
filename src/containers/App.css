@@ -309,8 +309,9 @@ th {
     z-index: 9999;
 }
 
-@media (max-width: 500px) {
-    td:nth-of-child(3) {
+@media (max-width: 550px) {
+    #duration-header,
+    .duration-field {
         display: none;
     }
 }

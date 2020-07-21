@@ -8,7 +8,7 @@ import {
 export default function fetchArtistByGenre(id) {
     return (dispatch) => {
         dispatch(actionByGenreArtistsPending());
-        fetch(`/genre/${id}/artists`)
+        fetch(`/api/genre/${id}/artists`)
             .then((res) => res.json())
             .then((res) => {
                 if (res.error) {

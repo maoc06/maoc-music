@@ -8,7 +8,7 @@ import {
 export default function fetchGenres() {
     return (dispatch) => {
         dispatch(actionGenreLoading());
-        fetch("/genre")
+        fetch("/api/genre")
             .then((res) => res.json())
             .then((res) => {
                 if (res.error) {

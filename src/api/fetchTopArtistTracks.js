@@ -8,7 +8,7 @@ import {
 export default function fetchTopArtistTracks(id) {
     return (dispatch) => {
         dispatch(actionTopArtistTracksPending());
-        fetch(`/artist/${id}/top`)
+        fetch(`/api/artist/${id}/top`)
             .then((res) => res.json())
             .then((res) => {
                 if (res.error) {

@@ -8,7 +8,7 @@ import {
 export default function fetchSearchSongs(query) {
     return (dispatch) => {
         dispatch(actionSearchTracksPending());
-        fetch(`/search/track?q=${query}&limit=3`)
+        fetch(`/api/search/track?q=${query}&limit=3`)
             .then((res) => res.json())
             .then((res) => {
                 if (res.error) {

@@ -8,7 +8,7 @@ import {
 export default function fetchSearchArtists(query) {
     return (dispatch) => {
         dispatch(actionSearchArtistsPending());
-        fetch(`/search/artist?q=${query}&limit=3`)
+        fetch(`/api/search/artist?q=${query}&limit=3`)
             .then((res) => res.json())
             .then((res) => {
                 if (res.error) {

@@ -1,9 +1,10 @@
 import React from "react";
+import Working from "../components/Working/Working";
 
 const AlbumsPage = () => {
   return (
     <div className="container-right">
-      <h1>Your Albums</h1>
+      <Working />
     </div>
   );
 };

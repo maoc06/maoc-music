@@ -1,11 +1,12 @@
 import React, { Component } from "react";
+import Working from "../components/Working/Working";
 
 class ForYouPage extends Component {
   state = {};
   render() {
     return (
       <div className="container-right">
-        <h1>For-You Page</h1>
+        <Working />
       </div>
     );
   }

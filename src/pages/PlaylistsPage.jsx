@@ -1,11 +1,12 @@
 import React, { Component } from "react";
+import Working from "../components/Working/Working";
 
 class PlaylistsPage extends Component {
   state = {};
   render() {
     return (
       <div className="container-right">
-        <h1>Your Playlists</h1>
+        <Working />
       </div>
     );
   }

@@ -318,24 +318,6 @@ th {
     color: var(--yellow);
 }
 
-.error-container button {
-    padding: 0 32px;
-    height: 40px;
-    border-radius: 8px;
-    border: 0;
-    margin-top: 32px;
-    background: var(--yellow);
-    font-weight: 700;
-    transition: all 0.2s ease-out;
-}
-
-.error-container button:hover {
-    cursor: pointer;
-    background: var(--background-color);
-    border: 1px solid var(--yellow);
-    color: var(--yellow);
-}
-
 
 /* End Error Page - 404 Not Found */
 

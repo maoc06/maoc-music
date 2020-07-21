@@ -1,3 +1,5 @@
+# Maoc Music
+
 ## Demo
 
 Go to the demo [here](https://maocmusic.netlify.app) :computer:
@@ -27,3 +29,9 @@ It consists of a small music web application :musical_note:. Developed with the 
 
 **:eye_speech_bubble: You can follow artists (:construction: this feature is in production)**
 ![Follow Artist](demo/follow_Maoc_Music.gif)
+
+## Responsive Design
+
+:iphone:
+
+![Responsive design](demo/responsive.gif)

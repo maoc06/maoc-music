@@ -26,6 +26,8 @@
     transition: 0.6s;
     font-size: 2px;
     color: transparent;
+    border: 0;
+    outline: 0;
 }
 
 .Follow-Button.Press {

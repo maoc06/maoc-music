@@ -350,7 +350,8 @@ th {
 
 @media (max-width: 500px) {
     .header-artist img {
-        width: 40%;
+        width: 180px;
+        max-height: 180px;
     }
 }
 

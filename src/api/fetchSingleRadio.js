@@ -8,8 +8,8 @@ import {
 export default function fetchSingleRadio(id) {
     return (dispatch) => {
         dispatch(actionRadioPending());
-        // fetch(`/api/radio/${id}/tracks`)
-        fetch(`/radio/${id}/tracks`)
+        fetch(`/api/radio/${id}/tracks`)
+            // fetch(`/radio/${id}/tracks`)
             .then((res) => res.json())
             .then((res) => {
                 if (res.error) {

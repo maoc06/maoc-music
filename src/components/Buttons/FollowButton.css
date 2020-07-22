@@ -5,7 +5,7 @@
     height: 32px;
     border-radius: 5px;
     border: 0;
-    background: rgba(255, 255, 255, 0.85);
+    background: var(--button-follow);
 }
 
 .Follow-Button:hover {
@@ -34,7 +34,7 @@
 
 .Follow-Button.Press {
     animation: size 0.4s;
-    color: var(--primary-color);
+    color: #fd2d47;
 }
 
 .Feedback.Press {
@@ -55,7 +55,7 @@
 
 .isFollow {
     font-weight: 700;
-    color: var(--primary-color);
+    color: #fd2d47;
 }
 
 @keyframes fade {
@@ -63,7 +63,7 @@
         color: transparent;
     }
     50% {
-        color: var(--primary-color);
+        color: #fd2d47;
     }
     100% {
         color: transparent;

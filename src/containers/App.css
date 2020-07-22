@@ -6,7 +6,7 @@
     grid-template-rows: 90px 1fr;
     grid-template-areas: "sidebar search-bar" "sidebar main";
     min-height: 100vh;
-    color: white;
+    color: var(--text-color);
     background: var(--background-color);
 }
 
@@ -24,7 +24,7 @@
 }
 
 .section-favorite a {
-    color: white;
+    color: var(--text-color);
     text-decoration: none;
 }
 
@@ -51,12 +51,17 @@
 .search-container {
     grid-area: search-bar;
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    color: white;
+    color: var(--text-color);
     padding: 0 var(--main-padding-sides);
 }
 
-input {
+.search-container form {
+    display: flex;
+}
+
+.search-container form input {
     padding: 0;
     height: 40px;
     width: 325px;
@@ -64,12 +69,12 @@ input {
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;
     background: var(--background-secondary-color);
-    color: white;
+    color: var(--text-color);
     font-family: "Poppins", sans-serif;
     border: 0;
 }
 
-.icon-search {
+.search-container form .icon-search {
     height: 40px;
     padding: 0 10px;
     border-top-left-radius: 8px;
@@ -78,16 +83,16 @@ input {
     border: 0;
 }
 
-.icon-search:hover {
+.search-container form .icon-search:hover {
     cursor: pointer;
-    color: rgba(255, 255, 255, 0.6);
+    color: var(--text-color);
 }
 
 @media (max-width: 700px) {
     .search-container {
         padding: 0 var(--main-padding-sides-mobile);
     }
-    input {
+    .search-container form input {
         width: 100%;
     }
 }
@@ -259,7 +264,7 @@ header .info .tags-genres p {
     padding: 5px;
     border-radius: 5px;
     text-decoration: none;
-    color: white;
+    color: var(--text-color);
     background: var(--background-secondary-color);
     cursor: pointer;
     margin-right: 10px;
@@ -314,7 +319,7 @@ td p {
 
 th {
     font-size: 1.2rem;
-    background: linear-gradient(to bottom, #fd2d55, transparent);
+    background: linear-gradient(to bottom, var(--primary-color), transparent);
     border: 0;
     text-align: left;
     position: sticky;

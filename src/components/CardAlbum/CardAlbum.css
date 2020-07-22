@@ -22,7 +22,7 @@
 }
 
 .album .Album-Title {
-    color: white;
+    color: var(--text-color);
     font-size: 0.8rem;
     margin: 0;
     white-space: nowrap;

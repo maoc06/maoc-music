@@ -11,12 +11,28 @@ body {
     --background-color: rgb(17, 22, 42);
     --background-accent-color: rgb(44, 56, 86);
     --background-secondary-color: rgb(60, 62, 77);
+    --text-color: rgb(255, 255, 255);
     --secondary-text-color: rgb(122, 124, 133);
     --yellow: rgb(240, 239, 11);
     --yellow-accent: rgb(161, 161, 11);
     --red-pale: rgb(239, 106, 107);
+    --button-follow: rgb(255, 255, 255);
+    --hint-color: rgba(255, 255, 255, 0.15);
     --main-padding-sides: 40px;
     --main-padding-sides-mobile: 18px;
+}
+
+[data-theme="light"] {
+    --primary-color: rgb(74, 178, 169);
+    --background-color: rgb(255, 255, 255);
+    --background-accent-color: rgb(243, 243, 245);
+    --background-secondary-color: rgb(246, 246, 246);
+    --text-color: rgb(13, 13, 13);
+    --secondary-text-color: rgb(51, 51, 51);
+    --yellow: rgb(74, 178, 169);
+    --yellow-accent: rgb(54, 141, 134);
+    --button-follow: rgba(0, 0, 0, 0.2);
+    --hint-color: rgba(0, 0, 0, 0.15);
 }
 
 a {

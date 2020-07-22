@@ -9,6 +9,7 @@ import fetchSearchAlbumsAction from "../api/fetchSearchAlbums";
 import fetchSearchTracksAction from "../api/fetchSearchTracks";
 
 import HintResults from "../components/SearchResults/HintResults";
+import ToogleTheme from "../components/Buttons/Toggle";
 
 class SearchBar extends Component {
   constructor(props) {
@@ -63,29 +64,35 @@ class SearchBar extends Component {
     } = this.props;
     if (loadingArtists || loadingAlbums || loadingTracks)
       return (
-        <form className="search-container" onSubmit={this.handleSearch}>
+        <div className="search-container">
+          <form onSubmit={this.handleSearch}>
+            <FontAwesomeIcon className="icon-search" icon={faSearch} />
+            <input
+              type="text"
+              placeholder="Search Artist, Albums, Songs"
+              onChange={this.handleChange}
+            />
+          </form>
+          <ToogleTheme />
+        </div>
+      );
+    return (
+      <div className="search-container">
+        <form onSubmit={this.handleSearch}>
           <FontAwesomeIcon className="icon-search" icon={faSearch} />
           <input
             type="text"
             placeholder="Search Artist, Albums, Songs"
             onChange={this.handleChange}
           />
+          <HintResults
+            artistsFound={foundArtists}
+            albumsFound={foundAlbums}
+            songsFound={foundTracks}
+          />
         </form>
-      );
-    return (
-      <form className="search-container" onSubmit={this.handleSearch}>
-        <FontAwesomeIcon className="icon-search" icon={faSearch} />
-        <input
-          type="text"
-          placeholder="Search Artist, Albums, Songs"
-          onChange={this.handleChange}
-        />
-        <HintResults
-          artistsFound={foundArtists}
-          albumsFound={foundAlbums}
-          songsFound={foundTracks}
-        />
-      </form>
+        <ToogleTheme />
+      </div>
     );
   }
 }

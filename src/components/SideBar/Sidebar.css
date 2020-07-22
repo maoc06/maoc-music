@@ -8,7 +8,7 @@
 
 .container .item {
     display: block;
-    color: white;
+    color: var(--text-color);
     text-decoration: none;
     margin: 20px 0;
 }

@@ -3,7 +3,7 @@ import "./CardSong.css";
 
 import convertDurationTrack from "../../core/functions/convertDurationTrack";
 import PlayButton from "../Buttons/PlayButton";
-import FollowButton from "../Buttons/FollowButton";
+import HeartButton from "../Buttons/HeartButton";
 
 const CardSong = ({ song }) => {
   return (
@@ -21,7 +21,7 @@ const CardSong = ({ song }) => {
       </div>
       <p className="duration">{convertDurationTrack(song.duration)}</p>
       <PlayButton url={song.preview} />
-      <FollowButton isTrack={true} />
+      <HeartButton track={song} />
     </div>
   );
 };

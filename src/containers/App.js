@@ -23,6 +23,7 @@ import SingleGenre from "../pages/SingleGenre";
 // Others
 import Error from "../pages/Error";
 import store from "../state/store";
+import FavoriteMobilePage from "../pages/FavoritesMobilePage";
 
 import "./App.css";
 
@@ -48,6 +49,8 @@ function App() {
             <Route exact path="/album/:id" component={SingleAlbum} />
             <Route exact path="/genre/:id" component={SingleGenre} />
             <Route exact path="/radio/:id" component={SingleRadio} />
+
+            <Route exact path="/favorites" component={FavoriteMobilePage} />
 
             <Route component={Error} />
           </Switch>

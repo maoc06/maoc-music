@@ -30,18 +30,18 @@ class ChartAlbums extends Component {
     if (this.state.index < limit) {
       let n = this.state.index + 1;
       this.setState({ index: n });
-      document.getElementById("left").style.transform = `translateX(-${
-        n * (170 + 40)
-      }px)`;
+      document.getElementById(
+        "carousel-top-albums"
+      ).style.transform = `translateX(-${n * (170 + 40)}px)`;
     }
   }
   handleLeft() {
     if (this.state.index > 0) {
       let n = this.state.index - 1;
       this.setState({ index: n });
-      document.getElementById("left").style.transform = `translateX(-${
-        n * (170 + 40)
-      }px)`;
+      document.getElementById(
+        "carousel-top-albums"
+      ).style.transform = `translateX(-${n * (170 + 40)}px)`;
     }
   }
 
@@ -70,7 +70,7 @@ class ChartAlbums extends Component {
           </div>
           <section>
             <div className="slider">
-              <div className="items-slider" id="left">
+              <div className="items-slider" id="carousel-top-albums">
                 {albums.data.map((album) => (
                   <CardAlbum key={album.id} album={album} />
                 ))}

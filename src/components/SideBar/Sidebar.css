@@ -32,6 +32,10 @@
     color: var(--secondary-text-color);
 }
 
+.container .sidebar-mobile {
+    display: none;
+}
+
 .icon {
     display: none;
 }
@@ -63,14 +67,15 @@
         bottom: 0;
         z-index: 9999;
     }
-    .container .sidebar-library {
+    .container .sidebar-library,
+    .sidebar-topics {
         display: none;
     }
-    .container .sidebar-topics {
+    .container .sidebar-mobile {
         display: flex;
         width: 100%;
     }
-    .container .sidebar-topics .item {
+    .container .sidebar-mobile .item {
         flex: 1;
         display: flex;
         flex-direction: column;

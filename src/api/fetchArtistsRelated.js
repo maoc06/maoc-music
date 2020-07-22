@@ -8,8 +8,8 @@ import {
 export default function fetchArtistRelated(id) {
     return (dispatch) => {
         dispatch(actionRelatedArtistsLoading());
-        fetch(`/api/artist/${id}/related`)
-            // fetch(`/artist/${id}/related`)
+        // fetch(`/api/artist/${id}/related`)
+        fetch(`/artist/${id}/related`)
             .then((res) => res.json())
             .then((res) => {
                 if (res.error) {

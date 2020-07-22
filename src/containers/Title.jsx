@@ -24,7 +24,7 @@ class Title extends Component {
 
   render() {
     const { artist, loading } = this.props;
-    console.log(artist);
+
     if (loading) return <Loading />;
     return (
       <div className="header-artist">
@@ -32,7 +32,7 @@ class Title extends Component {
         <div className="artist-info">
           <h1>{artist.name}</h1>
           <p>{convertNumber(artist.nb_fan)} Fans</p>
-          <FollowButton />
+          <FollowButton artist={artist} />
         </div>
       </div>
     );

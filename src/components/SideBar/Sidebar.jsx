@@ -6,7 +6,7 @@ import {
   faHome,
   faSearch,
   faBroadcastTower,
-  faChild,
+  faHeart,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -15,22 +15,18 @@ const Sidebar = () => {
     <div className="container">
       <section className="sidebar-topics">
         <NavLink exact to="/" className="item" activeClassName="active">
-          <FontAwesomeIcon className="icon" icon={faHome} />
           <span>Home</span>
         </NavLink>
 
         <NavLink exact to="/discover" className="item" activeClassName="active">
-          <FontAwesomeIcon className="icon" icon={faSearch} />
           <span>Discover</span>
         </NavLink>
 
         <NavLink exact to="/radio" className="item" activeClassName="active">
-          <FontAwesomeIcon className="icon" icon={faBroadcastTower} />
           <span>Radio</span>
         </NavLink>
 
         <NavLink exact to="/foryou" className="item" activeClassName="active">
-          <FontAwesomeIcon className="icon" icon={faChild} />
           <span>For you</span>
         </NavLink>
       </section>
@@ -61,6 +57,34 @@ const Sidebar = () => {
         >
           {/* <FontAwesomeIcon className="icon" icon={faMusic} /> */}
           <span>Playlists</span>
+        </NavLink>
+      </section>
+
+      {/* Footer on mobile */}
+      <section className="sidebar-mobile">
+        <NavLink exact to="/" className="item" activeClassName="active">
+          <FontAwesomeIcon className="icon" icon={faHome} />
+          <span>Home</span>
+        </NavLink>
+
+        <NavLink exact to="/discover" className="item" activeClassName="active">
+          <FontAwesomeIcon className="icon" icon={faSearch} />
+          <span>Discover</span>
+        </NavLink>
+
+        <NavLink
+          exact
+          to="/favorites"
+          className="item"
+          activeClassName="active"
+        >
+          <FontAwesomeIcon className="icon" icon={faHeart} />
+          <span>Favorites</span>
+        </NavLink>
+
+        <NavLink exact to="/radio" className="item" activeClassName="active">
+          <FontAwesomeIcon className="icon" icon={faBroadcastTower} />
+          <span>Radio</span>
         </NavLink>
       </section>
     </div>

@@ -4,12 +4,15 @@ import { bindActionCreators } from "redux";
 import { Link } from "react-router-dom";
 
 import fetchAlbumAction from "../api/fetchSingleAlbum";
+
 import convertDurationTrack from "../core/functions/convertDurationTrack";
 import convertDurationAlbum from "../core/functions/convertDurationAlbum";
 import convertNumber from "../core/functions/convertNumber";
+import addProperty from "../core/functions/addProperty";
 
 import Loading from "../components/Loading/Loading";
 import PlayButton from "../components/Buttons/PlayButton";
+import HeartButton from "../components/Buttons/HeartButton";
 
 class SingleAlbum extends Component {
   componentDidMount() {
@@ -50,6 +53,7 @@ class SingleAlbum extends Component {
               <th>Title</th>
               <th id="duration-header">Duration</th>
               <th></th>
+              <th></th>
             </tr>
           </thead>
           <tbody>
@@ -59,12 +63,14 @@ class SingleAlbum extends Component {
                 <td>
                   <p>{track.title}</p>
                 </td>
-                <td class="duration-field">
+                <td className="duration-field">
                   {convertDurationTrack(track.duration)}
                 </td>
                 <td>
                   <PlayButton url={track.preview} />
-                  {/* <FontAwesomeIcon icon={faPlay} /> */}
+                </td>
+                <td>
+                  <HeartButton track={addProperty(track, album.cover_small)} />
                 </td>
               </tr>
             ))}

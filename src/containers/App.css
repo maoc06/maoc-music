@@ -16,6 +16,18 @@
     padding: 0 var(--main-padding-sides);
 }
 
+.section-favorite {
+    border-radius: 8px;
+    margin: 10px;
+    padding: 12px;
+    background: var(--background-accent-color);
+}
+
+.section-favorite a {
+    color: white;
+    text-decoration: none;
+}
+
 @media (max-width: 700px) {
     h1 {
         font-size: 1.2rem;

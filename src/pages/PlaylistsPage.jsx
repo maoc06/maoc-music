@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Working from "../components/Working/Working";
+import Working from "../components/Others/Working";
 
 class PlaylistsPage extends Component {
   state = {};

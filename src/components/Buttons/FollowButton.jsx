@@ -1,40 +1,68 @@
-import React, { useState } from "react";
+import React, { Component } from "react";
 import "./FollowButton.css";
+import { connect } from "react-redux";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
 
-const FollowButton = ({ isTrack }) => {
-  const [follow, setFollow] = useState(false);
+import {
+  actionAddFollower,
+  actionRemoveFollower,
+} from "../../state/favorites/favoriteAction";
 
-  const toggle = () => {
-    setFollow(!follow);
+class FollowButton extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { toggle: false };
+    this.handleToogle = this.handleToogle.bind(this);
+  }
+
+  handleToogle = () => {
+    const { artist, addFollower, removeFollower, follower } = this.props;
+
+    this.setState((state) => ({ toggle: !state.toggle }));
+
+    follower.find((artistSaved) => artistSaved.id === artist.id)
+      ? removeFollower(artist.id)
+      : addFollower(artist);
   };
 
-  if (isTrack)
+  render() {
+    const { artist, follower } = this.props;
+
     return (
-      <div className="Track-Card">
-        <FontAwesomeIcon
-          icon={faHeart}
-          className={"Heart" + (follow ? " isFollow" : "")}
-          onClick={toggle}
-        />
-        <span className={"Feedback" + (follow ? " Press" : "")}>
+      <button
+        icon={faHeart}
+        className={
+          "Follow-Button" +
+          (follower.find((artistSaved) => artistSaved.id === artist.id)
+            ? " Press"
+            : "")
+        }
+        onClick={this.handleToogle}
+      >
+        <FontAwesomeIcon icon={faHeart} />
+        <span>
+          {follower.find((artistSaved) => artistSaved.id === artist.id)
+            ? "Unfollow"
+            : "Follow"}
+        </span>
+        <span className={"Feedback" + (this.state.toggle ? " Press" : "")}>
           <FontAwesomeIcon icon={faHeart} />
         </span>
-      </div>
+      </button>
     );
-  return (
-    <button
-      onClick={toggle}
-      className={"Follow-Button" + (follow ? " Press" : "")}
-    >
-      <FontAwesomeIcon icon={faHeart} />
-      <span>{follow ? "Unfollow" : "Follow"}</span>
-      <span className={"Feedback" + (follow ? " Press" : "")}>
-        <FontAwesomeIcon icon={faHeart} />
-      </span>
-    </button>
-  );
+  }
+}
+
+const mapStateToProps = (state) => ({
+  follower: state.favorites.followingArtists,
+});
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    addFollower: (data) => dispatch(actionAddFollower(data)),
+    removeFollower: (data) => dispatch(actionRemoveFollower(data)),
+  };
 };
 
-export default FollowButton;
+export default connect(mapStateToProps, mapDispatchToProps)(FollowButton);
